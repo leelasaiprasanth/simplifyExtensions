@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Simplify Extensions",
+  "version": "1.0",
+  "description": "Simplify managing your Chrome extensions.",
+  "permissions": ["management", "storage"],
+  "action": {
+    "default_title": "Simplify Extensions",
+    "default_popup": "src/index.html",
+    "default_icon": {
+      "64": "assets/icon64.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "64": "assets/icon64.png"
+  },
+  "options_ui": {
+    "page": "src/app/options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "src/app/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/app/content.js"]
+    }
+  ]
+}

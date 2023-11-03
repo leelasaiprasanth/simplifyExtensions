@@ -1,0 +1,72 @@
+body {
+  background-color: rgba(62, 62, 62, 0.279);
+  align-items: stretch;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding: 8px;
+  position: relative;
+  width: 260px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  padding: 5px;
+  margin: 0 auto;
+}
+
+ul,
+li {
+  padding-inline-start: 5px;
+  list-style-type: none;
+}
+
+img,
+span,
+input {
+  height: 20px; /* Set the icon's height to 100% of the list item height */
+  padding-right: 5px; /* Add some spacing between the icon and text */
+}
+
+.extensionList {
+  /* padding-left: 20px; */
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  /* padding-inline-start: 0px; */
+}
+
+/* popup.css */
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu-item {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+}
+
+/* Style the active tab with a background color */
+.menu-item.active {
+  background-color: #282828;
+  color: white;
+}
+
+/* Style the extensions on hover */
+li:hover {
+  background-color: #0909093c; /* Change background color on hover */
+}
